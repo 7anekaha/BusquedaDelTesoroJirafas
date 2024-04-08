@@ -24,10 +24,18 @@ export class AppComponent {
         break;
       case 2:
         this.flippedSound = !this.flippedSound;
+        this.playSound();
         break;
       case 3:
         this.flippedNumber = !this.flippedNumber;
         break;
     }
+  }
+
+   playSound() {
+    const audio = new Audio();
+    audio.src = 'assets/elephant.mp3';
+    audio.load();
+    audio.play();
   }
 }

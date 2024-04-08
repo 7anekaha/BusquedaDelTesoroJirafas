@@ -1,7 +1,7 @@
 /* Container to maintain card size */
 .flip-card {
   perspective: 1000px;
-  width: 70%;
+  width: 50%;
   display: flex;
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
@@ -54,4 +54,20 @@
   font-size: 3.5em; /* Adjust size as needed */
   text-shadow: 4px 4px 4px #aaa; /* Slight shadow for depth */
   margin: 20px 0; /* Spacing around the title */
+  text-shadow: 10px 4px 4px #aaa; /* Slight shadow for depth */
+  padding: 20px 20px 10px 10px; /* Optional: Adds some space between the text and the border */
+
+}
+
+p {
+  font-family: 'Fredoka One', cursive;
+  color: #930a0a; /* Tomato red, consider a color that kids might find attractive */
+  font-size: 25px;
+}
+
+/* Styling mat-card borders */
+mat-card img {
+  border: 2px solid #930a0a; /* Example: solid red border */
+  border-radius: 15px; /* Optional: adds rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds subtle shadow for depth */
 }
