@@ -1,13 +1,33 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {Component} from '@angular/core';
+import {MatCard} from "@angular/material/card";
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss'],
+  standalone: true,
+  imports: [
+    MatCard
+  ],
+  // Mark the component as standalone
 })
 export class AppComponent {
   title = 'BusquedaDelTesoroJirafas';
+  flippedColor = false;
+  flippedSound = false;
+  flippedNumber = false;
+
+  toggleFlip(i: number) {
+    switch (i) {
+      case 1:
+        this.flippedColor = !this.flippedColor;
+        break;
+      case 2:
+        this.flippedSound = !this.flippedSound;
+        break;
+      case 3:
+        this.flippedNumber = !this.flippedNumber;
+        break;
+    }
+  }
 }
